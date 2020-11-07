@@ -1,0 +1,10 @@
+DROP TABLE pcs;
+DROP TABLE installs;
+DROP TABLE rooms;
+DROP TABLE soft;
+DROP TABLE employees;
+CREATE TABLE pcs (id integer PRIMARY KEY, room_id integer, note varchar (50), ip_addr varchar (15), mac_addr varchar(15));
+CREATE TABLE installs (pc_id integer, soft_id integer);
+CREATE TABLE rooms (id integer PRIMARY KEY, num varchar (10), emp_id integer);
+CREATE TABLE soft (id integer PRIMARY KEY, sname varchar(50), ver integer, quant integer);
+CREATE TABLE employees (id integer PRIMARY KEY, lname varchar(15), fname varchar(15), mname varchar(15));
